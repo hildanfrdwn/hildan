@@ -1,0 +1,181 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling untuk body */
+body {
+  background-image: url('img/IO.jpg'); /* Ganti 'img/IO.jpg' dengan path file yang benar */
+  background-size: cover; /* Agar gambar mengisi seluruh latar belakang */
+  background-position: center; /* Posisikan gambar di tengah latar belakang */
+  font-family: 'Montserrat', cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}  
+
+/* Styling untuk judul h1 */
+h1 {
+  padding-bottom: 0.5rem;
+  padding-top: 3rem;
+  font-size: 50px;
+}
+
+/* Styling untuk button umum */
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: #04202c;
+  background-color: #c9d1c8;
+}
+
+/* Styling untuk container aplikasi */
+.app {
+  width: 600px;
+  margin: auto; /* Untuk memposisikan di tengah secara horizontal */
+  color: white;
+  text-align: center; /* Untuk memposisikan teks di tengah secara horizontal */
+  margin-top: 50px; /* Atur margin atas sesuai kebutuhan Anda */
+}
+
+/* Styling untuk header input to-do list */
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0px 0px 10px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Styling untuk input dan button pada header */
+.to-do-input {
+  display: flex;
+  justify-content: center; /* Memposisikan secara horizontal di tengah */
+  align-items: center; /* Memposisikan secara vertikal di tengah */
+}
+
+/* Styling untuk input field pada header */
+.to-do-input input {
+  width: 500px;
+  font-family: inherit;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+/* Styling untuk button pada header */
+.to-do-input button {
+  color: #5b7065;
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Styling untuk container list to-do */
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center; /* Memposisikan secara vertical di tengah */
+  padding-left: 1.5rem;
+}
+
+/* Styling untuk icon pada list to-do */
+.to-do-list i {
+  color: #1eff00;
+}
+
+/* Styling untuk icon edit pada list to-do */
+.to-do-list .fa-pencil {
+  color: #ffffff;
+}
+
+/* Styling untuk button umum pada list to-do */
+.to-do-list button {
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+/* Styling untuk setiap item pada list to-do */
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling untuk kontrol input pada setiap item */
+.input-controller {
+  display: flex;
+  gap: 10px;
+}
+
+/* Styling untuk textarea pada kontrol input */
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 1.4;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  transition: all 0.30s ease-in-out;
+}
+
+/* Styling saat textarea dalam fokus */
+textarea:focus {
+  box-shadow: 0 0 5px white;
+}
+
+/* Styling untuk kontrol edit pada setiap item */
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+/* Styling untuk kontrol update pada setiap item (awalnya tersembunyi) */
+.update-controller {
+  display: none;
+}
+
+/* Media query untuk tata letak responsif pada layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    text-align: center;
+  }
+
+  .input-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .to-do-input {
+    display: flex;
+  }
+
+  .to-do-input input {
+    width: 300px;
+  }
+}
